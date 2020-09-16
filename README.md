@@ -28,6 +28,6 @@ To build the project yourself, you require the one of the .NET Core runtimes.
 A friend was lazy to make a Steam collection of workshop items and instead wrote a list of 200 mods.
 
 
-# Extending the project:
+# Extending the project
 
 You can add Selenium-supported web drivers into the appropriate folders and change the enums and add to the SelectBrowser and SelectBrowserVersion methods of the SteamWorkshopSubscriber class.
