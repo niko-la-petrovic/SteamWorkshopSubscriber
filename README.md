@@ -1,6 +1,6 @@
 # SteamWorkshopSubscriber
 
-A cross-platform .NET Core solution for automating subscriptions to Steam Workshop items. 
+A cross-platform Selenium-based .NET Core solution for automating subscriptions to Steam Workshop items. 
 
 # Latest Notes
 - For some reason, the Firefox driver seems to be very slow at obtaining references to indiviual DOM elements.
