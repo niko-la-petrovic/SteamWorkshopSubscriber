@@ -1,4 +1,4 @@
-# SteamWorkshopSubscriber
+# Steam Workshop Subscriber
 
 A cross-platform Selenium-based .NET Core solution for automating subscriptions to Steam Workshop items. 
 
