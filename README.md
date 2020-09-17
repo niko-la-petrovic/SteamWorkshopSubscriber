@@ -25,7 +25,7 @@ To build the project yourself, you require the one of the .NET Core runtimes.
 
 # Motivation for making the project
 
-A friend was lazy to make a Steam collection of workshop items and instead wrote a list of 200 mods. Thanks for the idea for the project Volu.
+A friend was lazy to make a Steam collection of workshop items and instead wrote a list of 200 mods. Thanks for the idea for the project, Volu!
 
 
 # Extending the project
