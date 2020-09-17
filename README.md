@@ -12,7 +12,7 @@ TLDR: You can find them here [here](https://github.com/niko-la-petrovic/SteamWor
 
  The binaries will also contain the **workshop_list.json** file.
 ### Configuring
-The **workshop_list.json** file contains a JSON list of Steam Workshop item urls. You can, retaining the existing format, create your own lists and share them with others.
+The **workshop_list.json** file contains a JSON string array of Steam Workshop item urls. You can, retaining the existing format, create your own lists and share them with others.
 
 ### Running
 On Windows, just run the SteamWorkshopSubscriber.exe, or on other platforms run the dll named the same way with dotnet CL utility.
@@ -25,7 +25,7 @@ To build the project yourself, you require the one of the .NET Core runtimes.
 
 # Motivation for making the project
 
-A friend was lazy to make a Steam collection of workshop items and instead wrote a list of 200 mods.
+A friend was lazy to make a Steam collection of workshop items and instead wrote a list of 200 mods. Thanks for the idea for the project Volu.
 
 
 # Extending the project
