@@ -15,8 +15,8 @@ TLDR: You can find them here [here](https://github.com/niko-la-petrovic/SteamWor
 The **workshop_list.json** file contains a JSON string array of Steam Workshop item urls. You can, retaining the existing format, create your own lists and share them with others.
 
 ### Running
-On Windows, just run the SteamWorkshopSubscriber.exe, or on other platforms run the dll named the same way with dotnet CL utility.
-
+On Windows, run the SteamWorkshopSubscriber.exe, or on other platforms run the dll named the same way with dotnet CL utility.
+Follow the directions given in the console. After you've received a message about the app finishing, it will create a file in the same directory with the format additional_required_items_<timestamp>.json which you can use to subscribe to the addons that required additional mods. 
 ### Building
 
 To build the project yourself, you require the one of the .NET Core runtimes.
