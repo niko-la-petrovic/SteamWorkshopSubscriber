@@ -15,7 +15,6 @@ namespace SteamWorkshopSubscriber
     public class SteamWorkshopSubscriber
     {
 
-        string workshopListPath;
         List<string> workshopUrls;
 
         BrowserType browserType;
@@ -27,11 +26,16 @@ namespace SteamWorkshopSubscriber
         const string additionalRequiredItemsNameNoExt = "additional_required_items";
         IEnumerable<string> additionalRequiredItems = new List<string>();
 
-        public SteamWorkshopSubscriber(string workshopListPath)
+        public SteamWorkshopSubscriber(List<string> workshopListsPaths)
         {
-            this.workshopListPath = workshopListPath;
-            workshopUrls = System.Text.Json.JsonSerializer
-                .Deserialize<List<string>>(File.ReadAllText(workshopListPath));
+            workshopUrls = new List<string>();
+            foreach(string workshopListPath in workshopListsPaths)
+            {
+                workshopUrls = workshopUrls.Concat(
+                    System.Text.Json.JsonSerializer
+                .Deserialize<List<string>>(File.ReadAllText(workshopListPath)))
+                    .ToList();
+            }
         }
 
         public void Start()
@@ -47,7 +51,7 @@ namespace SteamWorkshopSubscriber
 
         private void WriteAdditionalItemsToFile()
         {
-            string additionalRequiredItemsName = $"{additionalRequiredItemsNameNoExt}_{DateTime.Now.ToLongDateString()}_{DateTime.Now.ToLongTimeString()}.json";
+            string additionalRequiredItemsName = $"{additionalRequiredItemsNameNoExt}_{DateTimeOffset.Now.ToUnixTimeMilliseconds()}.json";
             if (additionalRequiredItems.Count() > 0)
                 File.WriteAllText(additionalRequiredItemsName, System.Text.Json.JsonSerializer.Serialize(additionalRequiredItems));
         }
